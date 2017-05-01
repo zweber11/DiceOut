@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txtRollResult;
     Button btnRoll;
     Random rand;
+    int die1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +63,13 @@ public class MainActivity extends AppCompatActivity {
     public void rollDice(View v) {
         txtRollResult.setText("Rolling!");
 
-        int num = rand.nextInt(6)+1;
-        String randomValue = "Number generated: " + num;
-        Toast.makeText(getApplicationContext(), randomValue, Toast.LENGTH_SHORT).show();
+        //Roll dice
+        die1 = rand.nextInt(6) + 1;
+
+        //Output
+        String msg = "You rolled a " + die1;
+
+        txtRollResult.setText(msg);
     }
 
     @Override
