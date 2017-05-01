@@ -12,16 +12,18 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     //Global vars.
-    int score;
+    int score, die1, die2, die3;
     TextView txtRollResult;
     Button btnRoll;
     Random rand;
-    int die1;
+    ArrayList<Integer> dice;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         //Initialize the RNG.
         rand = new Random();
 
+        //Create ArrayList container for the dice values.
+        dice = new ArrayList<>();
+
     }
 
     public void rollDice(View v) {
@@ -65,9 +70,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Roll dice
         die1 = rand.nextInt(6) + 1;
+        die2 = rand.nextInt(6) + 1;
+        die3 = rand.nextInt(6) + 1;
+
+        //Set dice values into an ArrayList
+        dice.clear();
+        dice.add(die1);
+        dice.add(die2);
+        dice.add(die3);
 
         //Output
-        String msg = "You rolled a " + die1;
+        String msg = "You rolled a " + die1 + ", a " + die2 + ", and a " + die3;
 
         txtRollResult.setText(msg);
     }
