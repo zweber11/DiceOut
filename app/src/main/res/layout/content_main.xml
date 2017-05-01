@@ -6,22 +6,22 @@
     android:background="@android:color/holo_green_dark"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/txtRollResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="Let's Play!"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TableRow>
-
-            <TextView
-                android:id="@+id/txtRollResult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Let's Play!"
-                android:textColor="@android:color/white" />
-        </TableRow>
-
-        <TableRow>
-
             <ImageView
                 android:id="@+id/die1Image"
                 android:layout_width="100dp"
@@ -29,7 +29,6 @@
                 android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/die_1" />
-
             <ImageView
                 android:id="@+id/die2Image"
                 android:layout_width="100dp"
@@ -37,7 +36,6 @@
                 android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/die_1" />
-
             <ImageView
                 android:id="@+id/die3Image"
                 android:layout_width="100dp"
@@ -47,17 +45,15 @@
                 android:src="@drawable/die_1" />
         </TableRow>
 
-        <TableRow>
-
-
-        </TableRow>
-
         <TextView
             android:id="@+id/txtScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
             android:text="Score: 0"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
     </TableLayout>
 </LinearLayout>
